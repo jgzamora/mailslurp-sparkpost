@@ -1,0 +1,15 @@
+{
+  "name": "mailslurp-sparkPost",
+  "version": "1.0.0",
+  "description": "Use MailSlurp to test SparkPost email delivery",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Jose Zamora",
+  "license": "MIT",
+  "dependencies": {
+    "sparkpost": "^2.1.2",
+    "mailslurp-client": "^0.1.1514850454",
+    "jest": "^22.1.2"
+  }
+}
