@@ -2,15 +2,15 @@
 const SparkPost = require('sparkpost');
 
 // Sign up at SparkPost.com to get one of these for free
-const spKey = 'your-sparkpost-api-key';
+const spKey = process.env.SP_APIKEY;
 const client = new SparkPost(spKey);
 
-const sendMail = (address) => {
+const sendEmail = (address) => {
 
   const transmission = {
     recipients: [{ address: { email: address }}],
     content: {
-      from: 'Slurpy <hello@mail.avocado.industries>',
+      from: 'Slurpy <hello@mail.avocado.industries>', //use your own domain here
       subject: 'MailSlurp Test Email',
       html: '<html><body><p>Hello World</p></body></html>',
       text: 'Hello World!'
@@ -25,4 +25,4 @@ const sendMail = (address) => {
     });
 };
 
-module.exports = sendMail;
+module.exports = sendEmail;
